@@ -3,118 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي الشخصي</title>
-    <style>
-        /* إعدادات التصميم العامة */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            display: flex;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-
-        /* الشريط العلوي */
-        .navbar {
-            background-color: #2b3a42;
-            padding: 1em;
-            text-align: center;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        /* الشريط الجانبي */
-        .sidebar {
-            background-color: #2b3a42;
-            color: #fff;
-            padding: 1em;
-            width: 200px;
-            min-height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-y: auto;
-        }
-
-        .sidebar a {
-            color: #ffffff;
-            text-decoration: none;
-            display: block;
-            padding: 10px 0;
-            transition: 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #575e66;
-            padding-left: 10px;
-        }
-
-        /* محتوى الصفحة */
-        .content {
-            margin-left: 220px;
-            padding: 20px;
-        }
-
-        /* تذييل الصفحة */
-        .footer {
-            background-color: #2b3a42;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* تحسين تصميم الأزرار */
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>موقع معالجة الفيديو</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- شريط التنقل العلوي -->
-    <div class="navbar">
-        <h1>مرحبًا بك في موقعي</h1>
-    </div>
-
-    <!-- الشريط الجانبي -->
-    <div class="sidebar">
-        <h3>القائمة الجانبية</h3>
-        <a href="#">الرابط الأول</a>
-        <a href="#">الرابط الثاني</a>
-        <a href="#">الرابط الثالث</a>
-        <a href="#">الرابط الرابع</a>
-    </div>
-
-    <!-- المحتوى الرئيسي -->
-    <div class="content">
-        <h2>عن الموقع</h2>
-        <p>هذا هو موقعي الشخصي الذي أعمل على تطويره وإضافة المزيد من الميزات إليه.</p>
-        
-        <!-- زر تفاعلي -->
-        <button class="button">تعرف أكثر</button>
-
-        <h3>معلومات إضافية</h3>
-        <p>هنا يمكنك إضافة أي محتوى تريده مثل نصوص، صور، أو مقاطع فيديو.</p>
-    </div>
-
-    <!-- تذييل الصفحة -->
-    <div class="footer">
-        <p>جميع الحقوق محفوظة © 2023</p>
-    </div>
+    <header>
+        <h1>مرحبًا بك في موقع معالجة الفيديو</h1>
+    </header>
+    <main>
+        <section>
+            <h2>رفع الفيديو</h2>
+            <input type="file" id="videoUpload">
+            <button id="processButton">معالجة الفيديو</button>
+        </section>
+        <section id="results">
+            <h2>النتائج</h2>
+            <!-- سيتم عرض النتائج هنا -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 موقع معالجة الفيديو</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+
