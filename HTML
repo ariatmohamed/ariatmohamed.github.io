@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترجمة مقاطع يوتيوب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        #video-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>ترجمة مقاطع يوتيوب</h1>
+    <label for="youtube-url">أدخل رابط فيديو يوتيوب:</label>
+    <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=...">
+
+    <label for="language-select">اختر لغة الترجمة:</label>
+    <select id="language-select">
+        <option value="ar">العربية</option>
+        <option value="en">الإنجليزية</option>
+        <option value="fr">الفرنسية</option>
+        <option value="de">الألمانية</option>
+        <option value="es">الإسبانية</option>
+        <!-- يمكنك إضافة المزيد من اللغات هنا -->
+    </select>
+
+    <button id="translate-button">ترجم الفيديو</button>
+
+    <div id="video-container"></div>
+
+    <script>
+        document.getElementById('translate-button').onclick = function() {
+            var url = document.getElementById('youtube-url').value;
+            var language = document.getElementById('language-select').value;
+
+            // عرض الفيديو
+            var videoId = url.split('v=')[1].split('&')[0];
+            document.getElementById('video-container').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
+
+            // هنا يجب عليك إضافة الكود الخاص بالترجمة
+            alert('سيتم ترجمة الفيديو إلى: ' + language);
+        }
+    </script>
+</body>
+</html>
