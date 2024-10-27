@@ -6,38 +6,76 @@
     <title>ترجمة مقاطع يوتيوب</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f3;
+            color: #333;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
         }
         input, select, button {
             margin: 10px 0;
             padding: 10px;
             width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #357ab8;
         }
         #video-container {
             margin: 20px 0;
+            text-align: center;
+        }
+        iframe {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>ترجمة مقاطع يوتيوب</h1>
-    <label for="youtube-url">أدخل رابط فيديو يوتيوب:</label>
-    <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=...">
+    <div class="container">
+        <h1>ترجمة مقاطع يوتيوب</h1>
+        <label for="youtube-url">أدخل رابط فيديو يوتيوب:</label>
+        <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=...">
 
-    <label for="language-select">اختر لغة الترجمة:</label>
-    <select id="language-select">
-        <option value="ar">العربية</option>
-        <option value="en">الإنجليزية</option>
-        <option value="fr">الفرنسية</option>
-        <option value="de">الألمانية</option>
-        <option value="es">الإسبانية</option>
-        <!-- يمكنك إضافة المزيد من اللغات هنا -->
-    </select>
+        <label for="language-select">اختر لغة الترجمة:</label>
+        <select id="language-select">
+            <option value="ar">العربية</option>
+            <option value="en">الإنجليزية</option>
+            <option value="fr">الفرنسية</option>
+            <option value="de">الألمانية</option>
+            <option value="es">الإسبانية</option>
+            <!-- يمكنك إضافة المزيد من اللغات هنا -->
+        </select>
 
-    <button id="translate-button">ترجم الفيديو</button>
+        <button id="translate-button">ترجم الفيديو</button>
 
-    <div id="video-container"></div>
+        <div id="video-container"></div>
+    </div>
 
     <script>
         document.getElementById('translate-button').onclick = function() {
