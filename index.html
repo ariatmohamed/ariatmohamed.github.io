@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Translation and Download</title>
+    <title>Video Translation & Download</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wave-bg"></div>
-    <div class="container">
+    <header>
         <h1>Video Translation & Download</h1>
-        <div class="buttons">
-            <button onclick="window.location.href='download.html'">Download Video</button>
-            <button onclick="window.location.href='translate.html'">Translate Video</button>
+    </header>
+    
+    <!-- Main Interactive Section -->
+    <section class="main">
+        <div class="button-container">
+            <button id="downloadBtn">Download Video</button>
+            <button id="translateBtn">Translate Video</button>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer with background wave animation -->
+    <footer>
+        <div class="wave"></div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
