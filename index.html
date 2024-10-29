@@ -1,30 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع معالجة الفيديو</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Video Translation and Download</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>مرحبًا بك في موقع معالجة الفيديو</h1>
-    </header>
-    <main>
-        <section>
-            <h2>رفع الفيديو</h2>
-            <input type="file" id="videoUpload">
-            <button id="processButton">معالجة الفيديو</button>
-        </section>
-        <section id="results">
-            <h2>النتائج</h2>
-            <!-- سيتم عرض النتائج هنا -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 موقع معالجة الفيديو</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="wave-bg"></div>
+    <div class="container">
+        <h1>Video Translation & Download</h1>
+        <div class="buttons">
+            <button onclick="window.location.href='download.html'">Download Video</button>
+            <button onclick="window.location.href='translate.html'">Translate Video</button>
+        </div>
+    </div>
 </body>
 </html>
-
